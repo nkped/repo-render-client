@@ -1,10 +1,14 @@
 import './App.css';
 import axios from 'axios';
 
+const baseUrl = process.env.REACT_APP_SERVER_URL
+
+
 function App() {
   const handleClick = (event) => {
     event.preventDefault()
-    axios.get('/greeting')
+    console.log(process.env.NODE_ENV)
+    axios.get(baseUrl + '/greeting')
     .then((res) => {
       console.log(res)   
     })
