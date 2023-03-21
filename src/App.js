@@ -16,14 +16,29 @@ function App() {
       console.log(res)   
     })
       .catch((err) => console.log(err))
+    }
+
+
+  const handleOtherClick = (event) => {
+  event.preventDefault()  
+
+  axios.get('/posts')
+  .then((res) => {
+    console.log(res)   
+  })
+    .catch((err) => console.log(err))
 }
+
+
 
   return (
     <div className="App">
       <h1>React here!!</h1>
      
  <button onClick={handleClick}>Click</button>     
+ <button onClick={handleOtherClick}>Click</button>     
     </div>
+    
   );
 }
 
