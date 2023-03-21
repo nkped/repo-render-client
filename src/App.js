@@ -6,12 +6,14 @@ Code may fail to allow access to prod-server provided by render.com-served env v
 */
 
 
+const baseUrl = process.env.REACT_APP_SERVER_URL
+
 
 function App() {
   const handleClick = (event) => {
     event.preventDefault()  
 
-    axios.get('/greeting')
+    axios.get(baseUrl + '/greeting')
     .then((res) => {
       console.log(res)   
     })
@@ -22,7 +24,7 @@ function App() {
   const handleOtherClick = (event) => {
   event.preventDefault()  
 
-  axios.get('/posts')
+  axios.get(baseUrl + '/posts')
   .then((res) => {
     console.log(res)   
   })
