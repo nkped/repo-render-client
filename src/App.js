@@ -1,17 +1,17 @@
 import './App.css';
 import axios from 'axios';
 
-
+/*
+Code may fail to allow access to prod-server provided by render.com-served env variable
+*/
 
 
 
 function App() {
   const handleClick = (event) => {
-    event.preventDefault()
+    event.preventDefault()  
 
-    const baseUrl = 'http://localhost:3001'    
-
-    axios.get(baseUrl + '/greeting')
+    axios.get('/greeting')
     .then((res) => {
       console.log(res)   
     })
