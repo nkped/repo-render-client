@@ -15,6 +15,7 @@ function App() {
 
     axios.get(baseUrl + '/greeting')
     .then((res) => {
+      
       console.log(res)   
     })
       .catch((err) => console.log(err))
