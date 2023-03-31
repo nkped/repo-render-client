@@ -1,4 +1,4 @@
-
+import { useState } from "react"
 
 
 
@@ -7,23 +7,28 @@ const baseUrl = process.env.REACT_APP_SERVER_URL
 
 
 function GreetBotton() {
-    
+
+    const [ greeting, setGreeting ] = useState('no greeting')
+
     
     const handleClick = (event) => {
-        event.preventDefault()  
-        
+        event.preventDefault()
+
+        setGreeting( greeting + 'hello world')
+        /*
         axios.get(baseUrl + '/greeting')
         .then((res) => {
             
             console.log(res)   
         })
         .catch((err) => console.log(err))
+        */
     }
 
     return(
         <div>
         <button onClick={handleClick}>Click</button>
-        <div>{}</div>
+        <div>{greeting}</div>
         </div>       
         )
 }
