@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-
-
+/* shift + alt + a , will comment something out
+ */
 
 const baseUrl = process.env.REACT_APP_SERVER_URL
 
