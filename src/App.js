@@ -2,7 +2,7 @@ import './App.css';
 import axios from 'axios';
 import { useState } from 'react';
 import GreetBotton from './component/GreetButton';
-
+import Header from './component/Header';
 /*
 Code may fail to allow access to prod-server provided by render.com-served env variable
 */
@@ -35,6 +35,7 @@ function App() {
  <button onClick={handleClick}>Click</button>
  <div>{posts}</div>
  <GreetBotton />
+ <Header />
     </div>
     
   );

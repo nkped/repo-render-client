@@ -1,8 +1,11 @@
 import React from 'react'
 
 const Header = () => {
+    const today = new Date()
+
   return (
-    <div>Header</div>
+    
+    <div>Copyright {today.getFullYear()} &copy;</div>
   )
 }
 

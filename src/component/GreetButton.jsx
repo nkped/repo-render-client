@@ -15,7 +15,7 @@ function GreetBotton() {
         event.preventDefault()
 
         setGreeting( greeting + 'hello world')
-        /*
+        /* 
         axios.get(baseUrl + '/greeting')
         .then((res) => {
             
@@ -26,10 +26,10 @@ function GreetBotton() {
     }
 
     return(
-        <div>
+    <div>
         <button onClick={handleClick}>Click</button>
         <div>{greeting}</div>
-        </div>       
+    </div>       
         )
 }
 
